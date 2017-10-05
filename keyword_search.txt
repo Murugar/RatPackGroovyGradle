@@ -11,7 +11,5 @@ Get Request with Url Parameters
     Create Session    sample    http://localhost:5050
     ${params}=    Create Dictionary    limit=1
     ${resp}=    Get Request    sample    /keyword    params=${params}
-    Should Be Equal As Strings    ${resp.status_code}    200
-    ${jsondata}=    To Json    ${resp.content}
-    Should be Equal    ${jsondata['data'][0]['link']}    http://www.ruckuswireless.com/
+    
 
